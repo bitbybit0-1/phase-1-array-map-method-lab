@@ -1,3 +1,4 @@
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -12,5 +13,14 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  
+  return tutorials.map((tutorial)=>{
+   let array=tutorial.split(" ");
+   let x = array.map((element)=>element.charAt(0).toUpperCase()+element.slice(1,element.length))
+   return x.join(" ")
+  
+   
+  })
 }
+titleCased();
+
